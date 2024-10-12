@@ -16,8 +16,12 @@ message NotFoundError {
   string resource = 2;
 }
 
+// Error in validating something
 message ValidationError {
-  Error error = 1;
+// commentary
+// - list item 1
+// - list item 1
+  Error error = 1; 
   repeated string fields = 2;
 }
 
