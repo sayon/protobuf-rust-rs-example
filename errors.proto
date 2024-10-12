@@ -1,0 +1,27 @@
+// proto/errors.proto
+
+syntax = "proto3";
+
+package errors;
+
+// Base error message
+message Error {
+  string message = 1;
+  int32 code = 2;
+}
+
+// Specific error types
+message NotFoundError {
+  Error error = 1;
+  string resource = 2;
+}
+
+message ValidationError {
+  Error error = 1;
+  repeated string fields = 2;
+}
+
+message InternalServerError {
+  Error error = 1;
+  string details = 2;
+}

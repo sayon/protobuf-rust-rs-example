@@ -1,0 +1,16 @@
+{
+  "name": "protobuf-rust-rs-example",
+  "version": "1.0.0",
+  "devDependencies": {
+    "ts-proto": "^1.181.2"
+  },
+  "scripts": {
+      "generate": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./ts_generated --ts_proto_opt=esModuleInterop=true,forceLong=string,useOptionals=true --proto_path=. errors.proto",
+      "generate-doc": "protoc --plugin=protoc-gen-doc=./protoc-gen-doc --doc_out=./doc --doc_opt=html,index.html *.proto"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
